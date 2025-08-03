@@ -1,0 +1,752 @@
+/* Cores */
+:root {
+    --primary-light-purple: #D7BDE2; /* Roxo Claro */
+    --accent-gold: #DAA520;       /* Dourado */
+    --light-pink: #F5EEF8;        /* Rosa Claro */
+    --light-green: #D4EDDA;       /* Verde Claro */
+    --white: #FFFFFF;
+    --dark-text: #333333;
+    --gray-text: #666666;
+    --red-strong: #FF6347; /* Vermelho Forte */
+}
+
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--white);
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.section-padding {
+    padding: 80px 0;
+    text-align: center;
+}
+
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+
+h2 {
+    font-size: 2.5em;
+    color: var(--dark-text);
+    margin-bottom: 30px;
+}
+
+
+p {
+    margin-bottom: 15px;
+    color: var(--gray-text);
+}
+
+
+a {
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Header - Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, var(--primary-light-purple), var(--light-pink));
+    overflow: hidden;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.hero-content {
+    z-index: 2;
+    padding: 20px;
+    position: relative;
+}
+
+
+.couple-photo-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 5px solid var(--accent-gold);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+
+.couple-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.date {
+    font-size: 1.5em;
+    color: var(--red-strong);
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+
+.aliancas {
+    width: 100px;
+    margin: 20px auto;
+    display: block;
+    opacity: 0.9;
+    border-radius: 25px;
+
+
+}
+
+
+.invitation-text {
+    font-size: 1.2em;
+    font-style: italic;
+    color: var(--white);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+
+.flower-detail {
+    position: absolute;
+    width: 250px; /* Ajuste o tamanho conforme a imagem */
+    opacity: 0.7;
+    z-index: -1;
+}
+
+
+.flower-top-left {
+    top: -50px;
+    left: -50px;
+    transform: rotate(10deg);
+   
+}
+
+
+.flower-top-right {
+    bottom: -50px;
+    right: -50px;
+    transform: rotate(190deg);
+}
+
+
+.scroll-down-button {
+    background: none;
+    border: 2px solid var(--red-strong);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    z-index: 3;
+}
+
+
+.scroll-down-button:hover {
+    background-color: rgba(233, 156, 216, 0.2);
+}
+
+
+.arrow-down {
+    border: solid var(--red-strong);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+/* Navbar */
+.navbar {
+    background-color: var(--accent-gold);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Para posicionar o toggle button */
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+
+.nav-links a {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+.nav-links a:hover {
+    color: var(--light-pink);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+
+.menu-toggle {
+    display: none; /* Escondido por padrão em telas grandes */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute; /* Posição absoluta dentro do container */
+    left: 20px; /* Alinhar à esquerda */
+    z-index: 1001; /* Acima dos links quando o menu está fechado */
+}
+
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+
+/* Transformação do ícone do menu para "X" */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+
+/* Google Maps Box */
+.map-box {
+    margin: 40px auto;
+    max-width: 800px;
+    height: 450px; /* Altura padrão para o mapa */
+    border: 3px solid var(--accent-gold);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* Whatsapp Button */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+.whatsapp-button:hover {
+    background-color: #1DA851;
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+
+.whatsapp-button img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+     border-radius: 50%;
+}
+
+
+/* Gift List Section */
+.gift-section {
+    background-color: var(--light-pink);
+}
+
+
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+
+.gift-item {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garante que os itens tenham altura consistente */
+}
+
+
+.gift-image {
+    width: 100%;
+    height: 200px; /* Tamanho médio */
+    object-fit: contain;
+    border-bottom: 1px solid #eee;
+}
+
+
+.gift-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que o conteúdo cresça */
+    justify-content: space-between;
+}
+
+
+.gift-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--accent-gold);
+}
+
+
+.gift-info p {
+    font-size: 0.95em;
+    color: var(--gray-text);
+    margin-bottom: 15px;
+}
+
+
+/* Custom Checkbox */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--dark-text);
+    font-weight: 600;
+}
+
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--accent-gold);
+}
+
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--white);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* Estilo para item selecionado */
+.gift-item.selected {
+    border: 2px solid var(--accent-gold);
+    opacity: 0.7;
+}
+
+
+/* Media/Video Section */
+.media-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+.media-container iframe, .media-container audio {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Gold Background for Sections */
+.gold-background {
+    background-color: var(--light-green); /* Use light green for contrast */
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--dark-text);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+
+    h2 {
+        font-size: 2em;
+    }
+
+
+    .couple-photo-container {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    .aliancas {
+        width: 100px;
+    }
+
+
+    .date {
+        font-size: 1.2em;
+        color: var(--red-strong);
+    }
+
+
+    /* Navbar Responsiva */
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start; /* Alinha o toggle button à esquerda */
+    }
+
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Escondido por padrão no mobile */
+        text-align: center;
+        background-color: var(--accent-gold);
+        position: absolute;
+        top: 100%; /* Abaixo do navbar */
+        left: 0;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        animation: slideDown 0.5s ease-out forwards; /* Adiciona animação */
+    }
+
+
+    .nav-links.active {
+        display: flex; /* Mostra quando ativo */
+    }
+
+
+    .nav-links li {
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+
+    .menu-toggle {
+        display: block; /* Mostra o botão de toggle no mobile */
+    }
+
+
+    /* Animação para o menu */
+    @keyframes slideDown {
+        from { transform: translateY(-100%); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+
+    .map-box {
+        height: 300px;
+    }
+
+
+    .gift-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+
+    .flower-detail {
+        width: 150px;
+    }
+
+
+    .flower-top-left {
+        top: -30px;
+        left: -30px;
+    }
+
+
+    .flower-top-right {
+        bottom: -30px;
+        right: -30px;
+    }
+}
+
+
+/* Estilo para o item do presente quando selecionado */
+.gift-item.selected {
+    border: 3px solid var(--red-strong);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Mensagem de presente já escolhido */
+.gift-item.selected::after {
+    content: "ESTE PRESENTE JÁ FOI ESCOLHIDO POR ALGUÉM!";
+    position: absolute;
+    top: 10px;
+    right: -70px;
+    background-color: var(--red-strong);
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Estilo para o checkbox desabilitado */
+.checkbox-container input:disabled ~ .checkmark {
+    background-color: #f5f5f5;
+    border: 2px solid #ddd;
+}
+
+.checkbox-container input:disabled ~ .checkmark:after {
+    border-color: #999;
+}
+
+.checkbox-container input:disabled ~ span:not(.checkmark) {
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* Melhorando a visualização dos itens selecionados */
+.gift-item.selected .gift-image {
+    opacity: 0.8;
+}
+
+.gift-item.selected .gift-info h3,
+.gift-item.selected .gift-info p {
+    color: #777;
+}
+
+
+
+.checkbox-container input:disabled ~ .checkmark:after {
+    border-color: #888; /* Cor do "tick" do checkmark cinza */
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+
+    .couple-photo-container {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .aliancas {
+        width: 80px;
+    }
+
+
+    .date {
+        font-size: 1em;
+    }
+
+
+    .whatsapp-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+
+    .whatsapp-button img {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .gift-image {
+        height: 150px;
+    }
+
+
+    .flower-detail {
+        width: 100px;
+    }
+}
+

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Casamento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/aliancas.png" type="image/x-icon">
+       <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+
+<body>
+    <header class="hero-section">
+        <div class="hero-content">
+            <img src="img/flor_topo.jpg" alt="Detalhe de Flores" class="flower-detail flower-top-left">
+            <img src="img/flor_topo.jpg" alt="Detalhe de Flores" class="flower-detail flower-top-right">
+            <div class="couple-photo-container">
+                <img src="img/casal.jpg" alt="Foto do Casal" class="couple-photo">
+            </div>
+            <h1>❤Paulo & Edina❤</h1>
+            <p class="date"> 18, Outubro de 2025</p>
+            <img src="img/aliancas4.JPG" alt="Alianças de Casamento" class="aliancas">
+            <p class="invitation-text">"Duas vidas, um amor, um só caminho."</p>
+            <button class="scroll-down-button" aria-label="Role para baixo">
+                <span class="arrow-down"></span>
+            </button>
+        </div>
+    </header>
+
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <button class="menu-toggle" aria-label="Abrir menu de navegação">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#cerimonia">Cerimônia</a></li>
+                <li><a href="#recepcao">Recepção</a></li>
+                <li><a href="#confirmacao">Confirmação de Presença</a></li>
+                <li><a href="#lista-presentes">Lista de Presentes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main>
+        <section id="cerimonia" class="section-padding">
+            <div class="container">
+                <h2>Cerimônia Religiosa</h2>
+                <p>Será ás 16 Horas.</p>
+                <p>R. Eusébio de Queiroz, 229 - Jardim Amanda I, Hortolândia - SP, 13188-002.</p>
+                <div class="map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.313175173172!2d-47.23389922574172!3d-22.901816837691406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8bbc903b9743f%3A0x5738d9566cb9b080!2sComunidade%20Matriz%20Santa%20Luzia%20(Par%C3%B3quia%20Santa%20Luzia)!5e0!3m2!1spt-BR!2sbr!4v1753903792829!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Mapa da Cerimônia Religiosa"></iframe>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="recepcao" class="section-padding gold-background">
+            <div class="container">
+                <h2>Recepção de Confraternização</h2>
+                <p>[Nome do Local da Recepção], [Endereço completo do local].</p>
+                <div class="map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.4580161482427!2d-47.222031023933724!3d-22.896471337503886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8bb0943e27161%3A0x1c191f20c0cd61fb!2sPortal%20Quinta%20Dos%20Eucaliptos!5e0!3m2!1spt-BR!2sbr!4v1753917176653!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa da Recepção"></iframe>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="confirmacao" class="section-padding">
+            <div class="container">
+                <h2>Confirmação de Presença</h2>
+                <p>Por favor, confirme sua presença até o dia [Data Limite] para nos ajudar com o planejamento.</p>
+                <a href="https://wa.me/55DDINUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20no%20casamento."
+                    target="_blank" class="whatsapp-button">
+                    <img src="img/whatsapp.jpg" alt="Ícone do WhatsApp"> Confirmar Presença via WhatsApp
+                </a>
+            </div>
+        </section>
+
+
+        <section id="lista-presentes" class="section-padding gift-section">
+            <div class="container">
+                <h2>Lista de Presentes</h2>
+                <p>Sua presença já é nosso maior presente! Mas, se desejar nos presentear, algumas sugestões:</p>
+                <div class="gift-grid">
+                  <div class="gift-item" data-gift-id="1">
+                        <img src="img/cafeteira.png" alt="Cafeteira" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Cafeteira Expresso</h3>
+                            <p>Uma cafeteira para nossos cafés da manhã.</p>
+                            <label class="checkbox-container">
+                                Escolher este presente
+                                <input type="checkbox" class="gift-checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                                        <div class="gift-item" data-gift-id="2">
+                        <img src="img/cafeteira.png" alt="Jogo de Panelas" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Panelas</h3>
+                            <p>Para nos ajudar na cozinha.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="3">
+                        <img src="img/cafeteira.png" alt="Liquidificador" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Liquidificador Potente</h3>
+                            <p>Para sucos e vitaminas deliciosas.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="3">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="5">
+                        <img src="img/parafusadeira.png" alt="Parafusadeira" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Parafusadeira e Furadeira à Bateria 20V Vonder PFV 238</h3>
+                            <p>Para fazer as manuteções da casa.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="6">
+                        <img src="img/tapete.png" alt="Tapete" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Tapete Felpudo Para o Quarto</h3>
+                            <p>Nosso cantinho mais ainda mais linda e aconchegante!</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="7">
+                        <img src="img/cortina_rolo.png" alt="Cortina-rolo" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Cortina Rolo Blackout 1,20 L X 1,20 Cor Cinza</h3>
+                            <p>Ambientes com controle de luminosidade e um toque de elegância.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gift-item" data-gift-id="4">
+                        <img src="img/cafeteira.png" alt="Jogo de Jantar" class="gift-image">
+                        <div class="gift-info">
+                            <h3>Jogo de Jantar Completo</h3>
+                            <p>Para recebermos com estilo.</p>
+                            <label class="checkbox-container">
+                                Escolhido
+                                <input type="checkbox" class="gift-checkbox" data-gift-id="4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="musica-video" class="section-padding gold-background">
+            <div class="container">
+                <h2>Nossa Trilha Sonora</h2>
+                <p>Uma música que representa nosso amor:</p>
+                <div class="media-container">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/SUAEyJq9z9I?si=YOUR_YOUTUBE_VIDEO_ID"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; [Ano do Casamento] [Nome do Noivo] & [Nome da Noiva]. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="/js/script.js" defer></script>
+</body>
+
+
+</html>
+
+
