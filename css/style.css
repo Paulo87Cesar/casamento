@@ -1,15 +1,15 @@
 /* Cores */
 :root {
     --primary-light-purple: #D7BDE2; /* Roxo Claro */
-    --accent-gold: #DAA520;       /* Dourado */
-    --light-pink: #F5EEF8;        /* Rosa Claro */
-    --light-green: #D4EDDA;       /* Verde Claro */
+    --accent-gold: #DAA520;        /* Dourado */
+    --light-pink: #F5EEF8;         /* Rosa Claro */
+    --light-green: #D4EDDA;        /* Verde Claro */
     --white: #FFFFFF;
     --dark-text: #333333;
     --gray-text: #666666;
     --red-strong: #FF6347; /* Vermelho Forte */
+    --bg-color: #f8f8f8; /* Cor de fundo para o botão de scroll */
 }
-
 
 /* Base */
 * {
@@ -17,7 +17,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -27,26 +26,20 @@ body {
     scroll-behavior: smooth;
 }
 
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-
 .section-padding {
     padding: 80px 0;
     text-align: center;
 }
 
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--accent-gold);
-    margin-bottom: 20px;
+h1, h2, h3, p { 
+    margin-bottom: 0px;
 }
-
 
 h1 {
     font-size: 3.5em;
@@ -55,62 +48,69 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-
 h2 {
     font-size: 2.5em;
     color: var(--dark-text);
     margin-bottom: 30px;
 }
 
-
 p {
     margin-bottom: 15px;
     color: var(--gray-text);
 }
-
 
 a {
     color: var(--accent-gold);
     text-decoration: none;
 }
 
-
 a:hover {
     text-decoration: underline;
 }
 
-
 /* Header - Hero Section */
 .hero-section {
     position: relative;
-    height: 100vh;
+    /* height: 100vh; Removido para permitir ajuste dinâmico */
+    min-height: calc(100vh - 70px); /* Ajusta a altura mínima, considerando a navbar */
     display: flex;
+    flex-direction: column; /* Alinha o conteúdo em coluna */
     align-items: center;
     justify-content: center;
     background: linear-gradient(to bottom, var(--primary-light-purple), var(--light-pink));
     overflow: hidden;
     text-align: center;
-    margin-top: 30px;
+    padding-top: 70px; /* Adiciona padding para empurrar o conteúdo abaixo da navbar */
+    padding-bottom: 80px; /* Adiciona padding na parte inferior para o botão scroll-down */
 }
 
+.hero-content > p, strong {
+    color: var(--red-strong);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+}
 
 .hero-content {
     z-index: 2;
-    padding: 20px;
+    padding: 5px;
     position: relative;
+    display: flex; /* Adicionado para centralizar a imagem e texto juntos */
+    flex-direction: column; /* Coloca imagem e texto em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço disponível */
 }
 
-
 .couple-photo-container {
-    width: 200px;
+    width: 300px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 20px;
+    margin: 20px auto 20px; /* Adicionado margin-top para afastar da navbar em telas maiores */
     border: 5px solid var(--accent-gold);
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
-
 
 .couple-photo {
     width: 100%;
@@ -118,56 +118,39 @@ a:hover {
     object-fit: cover;
 }
 
-
-.date {
-    font-size: 1.5em;
-    color: var(--red-strong);
-    margin-top: 10px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-}
-
-
 .aliancas {
     width: 100px;
-    margin: 20px auto;
+    margin: 0 auto;
     display: block;
-    opacity: 0.9;
+    opacity: 0.5;
     border-radius: 25px;
-
-
 }
-
 
 .invitation-text {
     font-size: 1.2em;
     font-style: italic;
-    color: var(--white);
+    color: var(--red-strong);
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
-
 
 .flower-detail {
     position: absolute;
     width: 250px; /* Ajuste o tamanho conforme a imagem */
-    opacity: 0.7;
+    opacity: 0.2;
     z-index: -1;
 }
-
 
 .flower-top-left {
     top: -50px;
     left: -50px;
     transform: rotate(10deg);
-   
 }
-
 
 .flower-top-right {
     bottom: -50px;
     right: -50px;
     transform: rotate(190deg);
 }
-
 
 .scroll-down-button {
     background: none;
@@ -180,18 +163,18 @@ a:hover {
     justify-content: center;
     cursor: pointer;
     position: absolute;
-    bottom: 70px;
+    bottom: 20px; /* Ajuste para ficar acima do padding inferior da hero-section */
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
-    z-index: 3;
+    z-index: 10;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-
 
 .scroll-down-button:hover {
     background-color: rgba(233, 156, 216, 0.2);
 }
-
 
 .arrow-down {
     border: solid var(--red-strong);
@@ -201,7 +184,6 @@ a:hover {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
-
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
@@ -533,6 +515,7 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
+
     h1 {
         font-size: 2.5em;
     }
@@ -544,8 +527,8 @@ footer {
 
 
     .couple-photo-container {
-        width: 150px;
-        height: 150px;
+        width: 300px;
+        height: 200px;
     }
 
 
@@ -656,8 +639,8 @@ footer {
 .gift-item.selected::after {
     content: "ESTE PRESENTE JÁ FOI ESCOLHIDO POR ALGUÉM!";
     position: absolute;
-    top: 10px;
-    right: -70px;
+    top: 73px;
+    right: -68px;
     background-color: var(--red-strong);
     color: white;
     padding: 5px 10px;
@@ -713,8 +696,8 @@ footer {
 
 
     .couple-photo-container {
-        width: 120px;
-        height: 120px;
+        width: 190px;
+        height: 140px;
     }
 
 
@@ -749,4 +732,3 @@ footer {
         width: 100px;
     }
 }
-
